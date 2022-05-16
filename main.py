@@ -48,10 +48,6 @@ async def create_product(product: Product_Add):
         "message": "Product has been added successfully."
     }
 
-@app.get("/products/", tags=["Produto"])
-async def read_products():
-    return market["products"]
-
 @app.get("/products/{product_id}", tags=["Produto"])
 async def read_product(product_id: int):
     for items in market["products"]:
